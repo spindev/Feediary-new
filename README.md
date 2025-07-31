@@ -109,6 +109,46 @@ The project follows clean architecture principles:
 
 ## Deployment
 
+### Automated Deployment
+
+The project includes automated deployment to GitHub Container Registry on every push to the `main` branch using semantic versioning.
+
+#### How it works:
+
+1. **Semantic Release**: Automatically determines version based on conventional commit messages
+2. **Docker Build**: Multi-platform container build (linux/amd64, linux/arm64)
+3. **Container Registry**: Pushes to GitHub Container Registry (`ghcr.io/spindev/feediary-new`)
+
+#### Commit Message Format:
+
+Use conventional commit messages to trigger appropriate version bumps:
+
+- `feat:` - New feature (minor version bump)
+- `fix:` - Bug fix (patch version bump)  
+- `BREAKING CHANGE:` - Breaking change (major version bump)
+- `docs:`, `style:`, `refactor:`, `test:`, `build:`, `ci:` - Patch version bump
+
+Example:
+```bash
+git commit -m "feat: add feeding timer functionality"
+git commit -m "fix: resolve mobile navigation issue"
+git commit -m "feat!: redesign data storage (BREAKING CHANGE)"
+```
+
+#### Running the Container:
+
+After deployment, the latest version is available at:
+
+```bash
+# Pull and run latest version
+docker run -d -p 8080:8080 ghcr.io/spindev/feediary-new:latest
+
+# Or run a specific version
+docker run -d -p 8080:8080 ghcr.io/spindev/feediary-new:v1.2.3
+```
+
+### Manual Deployment
+
 ### Docker Production Deployment
 
 The included Dockerfile creates an optimized production build:

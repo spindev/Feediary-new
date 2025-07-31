@@ -1,139 +1,39 @@
 # Feediary - Baby Feed Diary
 
-A beautiful, mobile-first web application for tracking your baby's feeding schedule. Built with .NET 8 and Blazor Server, designed to behave like a native mobile app on iOS and Android.
+A simple and beautiful app to help parents track their baby's feeding schedule. Designed specifically for mobile phones to make logging feedings quick and easy, even during those busy parenting moments.
 
-## Features
+## What is Feediary?
 
-- **Mobile-First Design**: Optimized for mobile devices with touch-friendly navigation
-- **Bottom Navigation**: Native app-like navigation with Home, Calendar, and Settings
-- **Baby-Friendly Theme**: Soft colors and emoji icons designed for parents
-- **Time-based Greetings**: Dynamic greetings based on time of day
-- **Feeding Tracking**: Track feeding times, amounts, and patterns
-- **Calendar View**: View feeding schedules and summaries
-- **Settings Management**: Customize app preferences and baby profile
-- **Code-Behind Approach**: Clean separation of layout and logic
-- **Docker Support**: Easy self-hosted deployment
+Feediary is a baby feeding diary that helps you keep track of when, how much, and how often your little one eats. Whether you're breastfeeding, bottle-feeding, or starting solids, Feediary makes it easy to log and monitor your baby's feeding patterns.
 
-## Technology Stack
+## Why Use Feediary?
 
-- .NET 8
-- Blazor Server
-- CSS3 with Mobile-First responsive design
-- Docker for containerization
+**For New Parents:**
+- Never forget when the last feeding was
+- Track feeding amounts and patterns
+- Share feeding information easily with caregivers or pediatricians
+- Gain confidence in your baby's feeding routine
 
-## Quick Start
+**For Peace of Mind:**
+- Monitor your baby's growth and feeding trends
+- Set gentle reminders so you never miss a feeding
+- Keep detailed records that help identify what works best for your baby
 
-### Option 1: Docker (Recommended)
+## Key Features
 
-```bash
-# Clone the repository
-git clone https://github.com/spindev/Feediary-new.git
-cd Feediary-new
+- **Quick Feeding Logs**: Record feeding times, amounts, and notes in seconds
+- **Calendar View**: See feeding patterns and schedules at a glance  
+- **Smart Reminders**: Gentle notifications to help you stay on schedule
+- **Feeding Insights**: Track trends and patterns over time
+- **Mobile-Friendly**: Designed for phones - works perfectly with one hand
+- **Private & Secure**: Your baby's data stays with you
 
-# Build and run with Docker Compose
-docker-compose up -d
+## Who Is This For?
 
-# The app will be available at http://localhost:8080
-```
+Feediary is perfect for:
+- New parents learning their baby's feeding routine
+- Families with multiple caregivers who need to coordinate
+- Parents who want to track feeding data for pediatrician visits
+- Anyone looking for a simple, stress-free way to monitor their baby's nutrition
 
-### Option 2: Local Development
-
-```bash
-# Prerequisites: .NET 8 SDK
-cd Feediary
-dotnet restore
-dotnet run
-
-# The app will be available at http://localhost:5000
-```
-
-## Project Structure
-
-```
-Feediary/
-├── Components/
-│   ├── Layout/
-│   │   ├── MobileLayout.razor          # Mobile-first layout
-│   │   ├── MobileLayout.razor.cs       # Layout code-behind
-│   │   └── MobileLayout.razor.css      # Mobile-specific styles
-│   └── Pages/
-│       ├── Home.razor                  # Landing page
-│       ├── Home.razor.cs               # Home page logic
-│       ├── Calendar.razor              # Feeding calendar
-│       ├── Calendar.razor.cs           # Calendar logic
-│       ├── Settings.razor              # App settings
-│       └── Settings.razor.cs           # Settings logic
-├── wwwroot/
-│   └── app-mobile.css                  # Global mobile styles
-├── Dockerfile                          # Production container
-└── docker-compose.yml                  # Easy deployment
-```
-
-## Features Overview
-
-### 🏠 Home Page
-- Welcome message with time-based greeting
-- Feature overview cards
-- Baby-themed design with emoji icons
-
-### 📅 Calendar Page
-- Today's feeding summary
-- Next feeding predictions
-- Weekly feeding statistics
-- Date-formatted displays
-
-### ⚙️ Settings Page
-- Baby profile management
-- Notification preferences
-- App customization options
-- Data backup settings
-
-## Mobile App Behavior
-
-The application is designed to feel like a native mobile app:
-
-- **Fixed Bottom Navigation**: Always accessible navigation bar
-- **Touch-Friendly**: Large touch targets and intuitive gestures
-- **Mobile-First CSS**: Responsive design that prioritizes mobile experience
-- **App-Like Meta Tags**: Configured for iOS/Android home screen installation
-- **No Zoom**: Prevents unwanted zooming on mobile devices
-
-## Development
-
-The project follows clean architecture principles:
-
-- **Code-Behind Pattern**: Logic separated from markup using `.razor.cs` files
-- **Component-Based**: Modular Blazor components
-- **Mobile-First CSS**: Responsive design starting from mobile
-- **Clean Separation**: Layout, pages, and styles organized logically
-
-## Deployment
-
-### Docker Production Deployment
-
-The included Dockerfile creates an optimized production build:
-
-- Multi-stage build for smaller image size
-- Security best practices with non-root user
-- Optimized for container environments
-- Exposes port 8080 for easy deployment
-
-### Self-Hosting
-
-Perfect for families who want to keep their baby's data private:
-
-```bash
-docker run -d -p 8080:8080 --name feediary feediary:latest
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is open source and available under the MIT License.
+Keeping track of your baby's feeding shouldn't be complicated. Feediary makes it simple, so you can focus on what matters most - caring for your little one.

@@ -1,6 +1,6 @@
 namespace Feediary.Tests;
 
-public class UnitTest1
+public class InfrastructureTests
 {
     [Fact]
     public void BasicTest_ShouldPass()

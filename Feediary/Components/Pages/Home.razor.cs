@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 
 namespace Feediary.Components.Pages
 {
@@ -9,10 +10,10 @@ namespace Feediary.Components.Pages
             var hour = DateTime.Now.Hour;
             return hour switch
             {
-                >= 5 and < 12 => "Good Morning",
-                >= 12 and < 17 => "Good Afternoon",
-                >= 17 and < 22 => "Good Evening",
-                _ => "Good Night"
+                >= 5 and < 12 => Localizer["GoodMorning"],
+                >= 12 and < 17 => Localizer["GoodAfternoon"],
+                >= 17 and < 22 => Localizer["GoodEvening"],
+                _ => Localizer["GoodNight"]
             };
         }
     }

@@ -1,50 +1,51 @@
 @page "/settings"
 @layout MobileLayout
+@inject IStringLocalizer<SharedResources> Localizer
 
-<PageTitle>Settings - Feediary</PageTitle>
+<PageTitle>@Localizer["SettingsTitle"] - Feediary</PageTitle>
 
 <div class="page-header">
-    <h1 class="page-title">Settings</h1>
-    <p class="page-subtitle">Customize your baby's feeding tracker</p>
+    <h1 class="page-title">@Localizer["SettingsTitle"]</h1>
+    <p class="page-subtitle">@Localizer["SettingsSubtitle"]</p>
 </div>
 
 <div class="greeting-card">
-    <h2 class="welcome-text">App Settings</h2>
-    <p class="subtitle-text">Personalize your feeding diary experience</p>
+    <h2 class="welcome-text">@Localizer["AppSettingsTitle"]</h2>
+    <p class="subtitle-text">@Localizer["AppSettingsSubtitle"]</p>
 </div>
 
 <div class="feature-card">
-    <h3 class="feature-title">Baby Profile</h3>
+    <h3 class="feature-title">@Localizer["BabyProfileTitle"]</h3>
     <p class="feature-description">
-        <strong>Name:</strong> @BabyName<br/>
-        <strong>Birth Date:</strong> @BabyBirthDate<br/>
-        <strong>Age:</strong> @GetBabyAge()
+        <strong>@Localizer["Name"]</strong> @BabyName<br/>
+        <strong>@Localizer["BirthDate"]</strong> @BabyBirthDate<br/>
+        <strong>@Localizer["Age"]</strong> @GetBabyAge()
     </p>
 </div>
 
 <div class="feature-card">
-    <h3 class="feature-title">Notifications</h3>
+    <h3 class="feature-title">@Localizer["NotificationsTitle"]</h3>
     <p class="feature-description">
-        Feeding reminders: @(NotificationsEnabled ? "Enabled" : "Disabled")<br/>
-        Reminder interval: @ReminderInterval hours<br/>
-        Quiet hours: @QuietHoursStart - @QuietHoursEnd
+        @Localizer["FeedingReminders"] @(NotificationsEnabled ? Localizer["Enabled"] : Localizer["Disabled"])<br/>
+        @Localizer["ReminderInterval"] @ReminderInterval @Localizer["Hours"]<br/>
+        @Localizer["QuietHours"] @QuietHoursStart - @QuietHoursEnd
     </p>
 </div>
 
 <div class="feature-card">
-    <h3 class="feature-title">App Preferences</h3>
+    <h3 class="feature-title">@Localizer["AppPreferencesTitle"]</h3>
     <p class="feature-description">
-        Theme: @CurrentTheme<br/>
-        Units: @PreferredUnits<br/>
-        Language: @AppLanguage
+        @Localizer["Theme"] @Localizer["DarkMode"]<br/>
+        @Localizer["Units"] @Localizer["ImperialOz"]<br/>
+        @Localizer["Language"] @GetCurrentLanguageName()
     </p>
 </div>
 
 <div class="feature-card">
-    <h3 class="feature-title">Data & Backup</h3>
+    <h3 class="feature-title">@Localizer["DataBackupTitle"]</h3>
     <p class="feature-description">
-        Auto-backup: @(AutoBackupEnabled ? "Enabled" : "Disabled")<br/>
-        Last backup: @LastBackupDate<br/>
-        Data retention: @DataRetentionDays days
+        @Localizer["AutoBackup"] @(AutoBackupEnabled ? Localizer["Enabled"] : Localizer["Disabled"])<br/>
+        @Localizer["LastBackup"] @GetLocalizedLastBackup()<br/>
+        @Localizer["DataRetention"] @DataRetentionDays @Localizer["Days"]
     </p>
 </div>

@@ -1,11 +1,12 @@
 @page "/calendar"
 @layout MobileLayout
+@inject IStringLocalizer<SharedResources> Localizer
 
-<PageTitle>Calendar - Feediary</PageTitle>
+<PageTitle>@Localizer["Calendar"] - Feediary</PageTitle>
 
 <div class="page-header">
-    <h1 class="page-title">Feeding Calendar</h1>
-    <p class="page-subtitle">Track your baby's feeding schedule</p>
+    <h1 class="page-title">@Localizer["FeedingCalendar"]</h1>
+    <p class="page-subtitle">@Localizer["TrackSchedule"]</p>
 </div>
 
 <div class="calendar-container">
@@ -17,13 +18,13 @@
     
     <div class="calendar-grid">
         <div class="day-headers">
-            <div class="day-header">Sun</div>
-            <div class="day-header">Mon</div>
-            <div class="day-header">Tue</div>
-            <div class="day-header">Wed</div>
-            <div class="day-header">Thu</div>
-            <div class="day-header">Fri</div>
-            <div class="day-header">Sat</div>
+            <div class="day-header">@Localizer["Sunday"]</div>
+            <div class="day-header">@Localizer["Monday"]</div>
+            <div class="day-header">@Localizer["Tuesday"]</div>
+            <div class="day-header">@Localizer["Wednesday"]</div>
+            <div class="day-header">@Localizer["Thursday"]</div>
+            <div class="day-header">@Localizer["Friday"]</div>
+            <div class="day-header">@Localizer["Saturday"]</div>
         </div>
         
         <div class="calendar-days">
@@ -42,19 +43,19 @@
 </div>
 
 <div class="today-summary">
-    <h3>Today's Summary</h3>
+    <h3>@Localizer["TodaysSummary"]</h3>
     <div class="summary-stats">
         <div class="stat">
             <span class="stat-value">@TodaysFeedingCount</span>
-            <span class="stat-label">Feedings</span>
+            <span class="stat-label">@Localizer["Feedings"]</span>
         </div>
         <div class="stat">
             <span class="stat-value">@GetLastFeedingTime()</span>
-            <span class="stat-label">Last</span>
+            <span class="stat-label">@Localizer["Last"]</span>
         </div>
         <div class="stat">
             <span class="stat-value">@GetNextFeedingTime()</span>
-            <span class="stat-label">Next</span>
+            <span class="stat-label">@Localizer["Next"]</span>
         </div>
     </div>
 </div>

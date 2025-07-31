@@ -1,0 +1,55 @@
+@page "/settings"
+@layout MobileLayout
+
+<PageTitle>Settings - Feediary</PageTitle>
+
+<div class="page-header">
+    <h1 class="page-title">Settings</h1>
+    <p class="page-subtitle">Customize your baby's feeding tracker</p>
+</div>
+
+<div class="greeting-card">
+    <div class="baby-icon">⚙️</div>
+    <h2 class="welcome-text">App Settings</h2>
+    <p class="subtitle-text">Personalize your feeding diary experience</p>
+</div>
+
+<div class="feature-card">
+    <div class="feature-icon">👶</div>
+    <h3 class="feature-title">Baby Profile</h3>
+    <p class="feature-description">
+        <strong>Name:</strong> @BabyName<br/>
+        <strong>Birth Date:</strong> @BabyBirthDate<br/>
+        <strong>Age:</strong> @GetBabyAge()
+    </p>
+</div>
+
+<div class="feature-card">
+    <div class="feature-icon">🔔</div>
+    <h3 class="feature-title">Notifications</h3>
+    <p class="feature-description">
+        Feeding reminders: @(NotificationsEnabled ? "Enabled" : "Disabled")<br/>
+        Reminder interval: @ReminderInterval hours<br/>
+        Quiet hours: @QuietHoursStart - @QuietHoursEnd
+    </p>
+</div>
+
+<div class="feature-card">
+    <div class="feature-icon">📱</div>
+    <h3 class="feature-title">App Preferences</h3>
+    <p class="feature-description">
+        Theme: @CurrentTheme<br/>
+        Units: @PreferredUnits<br/>
+        Language: @AppLanguage
+    </p>
+</div>
+
+<div class="feature-card">
+    <div class="feature-icon">💾</div>
+    <h3 class="feature-title">Data & Backup</h3>
+    <p class="feature-description">
+        Auto-backup: @(AutoBackupEnabled ? "Enabled" : "Disabled")<br/>
+        Last backup: @LastBackupDate<br/>
+        Data retention: @DataRetentionDays days
+    </p>
+</div>

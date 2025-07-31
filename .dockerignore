@@ -1,0 +1,35 @@
+# .dockerignore
+
+# Directories
+**/bin/
+**/obj/
+**/out/
+**/TestResults/
+**/node_modules/
+
+# Files
+**/.DS_Store
+**/.git*
+**/.vs*
+**/*.md
+**/Dockerfile*
+**/docker-compose*
+**/.dockerignore
+
+# Build and runtime artifacts
+**/.nuget/
+**/packages/
+**/publish/
+**/logs/
+
+# IDE files
+**/.vscode/
+**/.idea/
+**/*.user
+**/*.suo
+**/*.cache
+
+# OS files
+**/Thumbs.db
+**/.tmp
+**/.temp

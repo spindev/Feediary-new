@@ -1,0 +1,42 @@
+@page "/calendar"
+@layout MobileLayout
+
+<PageTitle>Calendar - Feediary</PageTitle>
+
+<div class="page-header">
+    <h1 class="page-title">Feeding Calendar</h1>
+    <p class="page-subtitle">Track your baby's feeding schedule</p>
+</div>
+
+<div class="greeting-card">
+    <div class="baby-icon">📅</div>
+    <h2 class="welcome-text">@GetCurrentDateFormatted()</h2>
+    <p class="subtitle-text">Today's feeding summary and upcoming schedule</p>
+</div>
+
+<div class="feature-card">
+    <div class="feature-icon">🕐</div>
+    <h3 class="feature-title">Today's Feedings</h3>
+    <p class="feature-description">
+        @TodaysFeedingCount feedings recorded today.<br/>
+        Last feeding: @GetLastFeedingTime()
+    </p>
+</div>
+
+<div class="feature-card">
+    <div class="feature-icon">⏰</div>
+    <h3 class="feature-title">Next Feeding</h3>
+    <p class="feature-description">
+        Estimated next feeding time: @GetNextFeedingTime()<br/>
+        <small>Based on your baby's feeding pattern</small>
+    </p>
+</div>
+
+<div class="feature-card">
+    <div class="feature-icon">📈</div>
+    <h3 class="feature-title">Weekly Summary</h3>
+    <p class="feature-description">
+        This week: @WeeklyFeedingCount total feedings<br/>
+        Average per day: @AverageFeedingsPerDay
+    </p>
+</div>

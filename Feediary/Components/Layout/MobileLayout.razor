@@ -1,0 +1,28 @@
+@inherits LayoutComponentBase
+
+<div class="mobile-app">
+    <main class="content">
+        @Body
+    </main>
+    
+    <nav class="bottom-nav">
+        <a href="/" class="nav-item @(IsActive("/"))">
+            <div class="nav-icon">○</div>
+            <span class="nav-label">Home</span>
+        </a>
+        <a href="/calendar" class="nav-item @(IsActive("/calendar"))">
+            <div class="nav-icon">□</div>
+            <span class="nav-label">Calendar</span>
+        </a>
+        <a href="/settings" class="nav-item @(IsActive("/settings"))">
+            <div class="nav-icon">☰</div>
+            <span class="nav-label">Settings</span>
+        </a>
+    </nav>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>

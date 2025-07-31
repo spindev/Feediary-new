@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  feediary:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: feediary-app
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+    restart: unless-stopped
+    networks:
+      - feediary-network
+
+networks:
+  feediary-network:
+    driver: bridge
+
+volumes:
+  feediary-data:
+    driver: local

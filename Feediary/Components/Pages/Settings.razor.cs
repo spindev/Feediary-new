@@ -11,7 +11,7 @@ namespace Feediary.Components.Pages
         public int ReminderInterval { get; set; } = 3;
         public string QuietHoursStart { get; set; } = "10:00 PM";
         public string QuietHoursEnd { get; set; } = "6:00 AM";
-        public string CurrentTheme { get; set; } = "Baby Pink";
+        public string CurrentTheme { get; set; } = "Dark Mode";
         public string PreferredUnits { get; set; } = "Imperial (oz)";
         public string AppLanguage { get; set; } = "English";
         public bool AutoBackupEnabled { get; set; } = true;

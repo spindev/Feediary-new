@@ -8,35 +8,53 @@
     <p class="page-subtitle">Track your baby's feeding schedule</p>
 </div>
 
-<div class="greeting-card">
-    <div class="baby-icon">📅</div>
-    <h2 class="welcome-text">@GetCurrentDateFormatted()</h2>
-    <p class="subtitle-text">Today's feeding summary and upcoming schedule</p>
+<div class="calendar-container">
+    <div class="calendar-header">
+        <button class="nav-btn" @onclick="PreviousMonth">&lt;</button>
+        <h2 class="month-year">@GetMonthYearDisplay()</h2>
+        <button class="nav-btn" @onclick="NextMonth">&gt;</button>
+    </div>
+    
+    <div class="calendar-grid">
+        <div class="day-headers">
+            <div class="day-header">Sun</div>
+            <div class="day-header">Mon</div>
+            <div class="day-header">Tue</div>
+            <div class="day-header">Wed</div>
+            <div class="day-header">Thu</div>
+            <div class="day-header">Fri</div>
+            <div class="day-header">Sat</div>
+        </div>
+        
+        <div class="calendar-days">
+            @foreach (var day in GetCalendarDays())
+            {
+                <div class="calendar-day @(day.IsCurrentMonth ? "current-month" : "other-month") @(day.Date == today ? "today" : "")">
+                    <div class="day-number">@day.Date.Day</div>
+                    @if (day.FeedingCount > 0)
+                    {
+                        <div class="feeding-count">@day.FeedingCount</div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
 </div>
 
-<div class="feature-card">
-    <div class="feature-icon">🕐</div>
-    <h3 class="feature-title">Today's Feedings</h3>
-    <p class="feature-description">
-        @TodaysFeedingCount feedings recorded today.<br/>
-        Last feeding: @GetLastFeedingTime()
-    </p>
-</div>
-
-<div class="feature-card">
-    <div class="feature-icon">⏰</div>
-    <h3 class="feature-title">Next Feeding</h3>
-    <p class="feature-description">
-        Estimated next feeding time: @GetNextFeedingTime()<br/>
-        <small>Based on your baby's feeding pattern</small>
-    </p>
-</div>
-
-<div class="feature-card">
-    <div class="feature-icon">📈</div>
-    <h3 class="feature-title">Weekly Summary</h3>
-    <p class="feature-description">
-        This week: @WeeklyFeedingCount total feedings<br/>
-        Average per day: @AverageFeedingsPerDay
-    </p>
+<div class="today-summary">
+    <h3>Today's Summary</h3>
+    <div class="summary-stats">
+        <div class="stat">
+            <span class="stat-value">@TodaysFeedingCount</span>
+            <span class="stat-label">Feedings</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">@GetLastFeedingTime()</span>
+            <span class="stat-label">Last</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">@GetNextFeedingTime()</span>
+            <span class="stat-label">Next</span>
+        </div>
+    </div>
 </div>

@@ -20,6 +20,7 @@
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Feediary.props
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/staticwebassets.pack.json
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/scopedcss/Components/Layout/MainLayout.razor.rz.scp.css
+/home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/scopedcss/Components/Layout/MobileLayout.razor.rz.scp.css
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/scopedcss/Components/Layout/NavMenu.razor.rz.scp.css
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/scopedcss/bundle/Feediary.styles.css
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/scopedcss/projectbundle/Feediary.bundle.scp.css
@@ -28,4 +29,3 @@
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/Feediary.pdb
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/Feediary.genruntimeconfig.cache
 /home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/ref/Feediary.dll
-/home/runner/work/Feediary-new/Feediary-new/Feediary/obj/Debug/net8.0/scopedcss/Components/Layout/MobileLayout.razor.rz.scp.css

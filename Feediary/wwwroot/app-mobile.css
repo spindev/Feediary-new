@@ -1,10 +1,12 @@
-/* Global mobile-first styles for Feediary */
+/* Global mobile-first dark theme styles for Feediary */
 html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
     overflow-x: hidden;
+    background: #1a1a1a;
+    color: #ffffff;
 }
 
 * {
@@ -12,25 +14,25 @@ html, body {
 }
 
 a, .btn-link {
-    color: #ff6b6b;
+    color: #4CAF50;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #ff6b6b;
-    border-color: #ff5252;
+    background-color: #4CAF50;
+    border-color: #45a049;
     border-radius: 25px;
     padding: 12px 24px;
     font-weight: 500;
 }
 
 .btn-primary:hover {
-    background-color: #ff5252;
-    border-color: #ff3939;
+    background-color: #45a049;
+    border-color: #3d8b40;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #ff6b6b;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #4CAF50;
 }
 
 h1:focus {

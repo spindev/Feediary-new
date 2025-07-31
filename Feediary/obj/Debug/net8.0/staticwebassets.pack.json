@@ -13,14 +13,6 @@
       "PackagePath": "staticwebassets/app.css"
     },
     {
-      "Id": "/home/runner/work/Feediary-new/Feediary-new/Feediary/wwwroot/bootstrap/bootstrap.min.css",
-      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
-    },
-    {
-      "Id": "/home/runner/work/Feediary-new/Feediary-new/Feediary/wwwroot/bootstrap/bootstrap.min.css.map",
-      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
-    },
-    {
       "Id": "/home/runner/work/Feediary-new/Feediary-new/Feediary/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Feediary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7987d96916251d082c1ef185e5ec04215706285")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91ba57e2a10e0ae7f2bba4aeb629e1caa203984e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Feediary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Feediary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
